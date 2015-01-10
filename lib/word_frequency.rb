@@ -1,16 +1,9 @@
 class String
   define_method(:word_frequency) do |search_word|
-
     search_word.upcase!()
     clean_search_string = self.gsub(/[^a-z\s]/i, '')
     clean_search_array = clean_search_string.upcase().split(" ")
     clean_search_array.count(search_word)
-
-        # if clean_search_array.include?(search_word)
-        #    clean_search_array.count(search_word)
-        # else
-        #   "That word is not found in the phrase"
-        # end
   end
 end
 
